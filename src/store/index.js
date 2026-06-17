@@ -14,5 +14,5 @@ export const store = configureStore({
         windows: windowsReducer,
         calculator: calculatorReducer,
     },
-    middleware: [persistanceMiddleware]
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(persistanceMiddleware)
 })

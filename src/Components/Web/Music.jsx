@@ -1,11 +1,11 @@
 import { Howl, Howler } from "howler";
 import { useState, useEffect } from "react";
-import { songs } from "../Utils/songs";
+import { songs } from "../../Utils/songs";
 
-export const Music = ({volum}) => {
+export const Music = ({ volum }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSong, setCurrentSong] = useState(0);
-  
+
   const handlePlayNext = () => {
     let newIndex = currentSong + 1;
     if (newIndex >= songs.length) {
@@ -53,7 +53,7 @@ export const Music = ({volum}) => {
 
   useEffect(() => {
     Howler.volume(volum / 100)
-  },[volum])
+  }, [volum])
 
   const handlePlayPause = () => {
     if (isPlaying) {

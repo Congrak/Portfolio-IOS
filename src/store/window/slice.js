@@ -6,8 +6,7 @@ export const windowsSlice = createSlice({
     reducers:{
         open: (state, action) => {
             const id = action.payload;
-            state.push(id)
-            return console.log(state[id], 'open')
+            if (!state.includes(id)) state.push(id);
         },
         close: (state, action) => {},
         minimize: (state, action) => {}

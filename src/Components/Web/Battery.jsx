@@ -5,22 +5,18 @@ export const BatteryStatus = () => {
   const [level, setLevel] = useState(0);
 
   useEffect(() => {
-    const updateBatteryInfo = (battery) => {
+    if (!navigator.getBattery) return;
 
-      setLevel(battery.charging ? battery.level * 0.73: battery.level * 0.73);
-      
-      setBatteryLevel(battery.charging ? true : false);
+    const updateBatteryInfo = (battery) => {
+      setLevel(battery.level * 0.73);
+      setBatteryLevel(battery.charging);
     };
 
     navigator.getBattery().then((battery) => {
       updateBatteryInfo(battery);
-
       battery.addEventListener("levelchange", () => updateBatteryInfo(battery));
-
-      battery.addEventListener("chargingchange", () =>
-        updateBatteryInfo(battery)
-      );
-    });
+      battery.addEventListener("chargingchange", () => updateBatteryInfo(battery));
+    }).catch(() => { });
   }, []);
 
   return (
@@ -40,9 +36,8 @@ export const BatteryStatus = () => {
         />
       </svg>
       <div
-        className={`absolute top-[35%] left-[0.1rem] h-[0.36rem] ${
-          batteryLevel === true ? "bg-green-400" : "bg-white"
-        }`}
+        className={`absolute top-[35%] left-[0.1rem] h-[0.36rem] ${batteryLevel === true ? "bg-green-400" : "bg-white"
+          }`}
         style={{ maxWidth: "0.73rem", width: level + "rem" }}
       ></div>
       {batteryLevel === true ? (

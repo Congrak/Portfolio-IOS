@@ -1,82 +1,30 @@
-export const PROMPT = "rodricelis ~ 🐮:" + ' ';
-export const FILE_LIST = ["About", "Facts.txt", "Projects"];
-export const ABOUT_FILES = ['Me.txt', 'Contact.txt', 'Important.txt'];
-export const PROJECTS_FILES = ['Tesla.txt', 'Rodricraft.txt', 'Pokedex.txt', 'BidSellBuy.txt']
+export const PROMPT = "rodricelis ~ 🐧:" + ' ';
+export const FILE_LIST = ["about", "projects", "facts.txt"];
+export const ABOUT_FILES = ['me.txt', 'contact.txt', 'important.txt'];
+export const PROJECTS_FILES = ['tintsathome.txt', 'whizzlink.txt', 'icondex.txt', 'rodricraft.txt']
+
 export const HELP = `
-\rList of available commands:\r
-    - ..: go back one directory.\r
-    - help: list of available commands.\r
-    - ls: list of files and folders.\r
-    - cd <file>: change directory.\r
-    - cat <name>: show content of file.\r
-    - clear: clear the terminal.\r
-    - press up arrow / down arrow: History.\r
-    - reset: reset the terminal.\r\n`
-export const FACT = `🚀  I don't need a Mac when I can build this macOS experience 🚀`
-export const ABOUT = `
-Hi, I'm Rodrigo Celis, a full-stack developer currently living in Miami, FL. I'm a 26 year old Venezuelan who studied Telecommunication Engineering at the Universidad Catolica Andres Bello. I've lived in 3 different countries in pursuit of my dreams. My passion is coding, and I won't stop until I achieve my goals.`
-export const CONTACT = `
-Keep in Touch: \r
-    - LinkedIn: https://www.linkedin.com/in/rodrigo-celis-zamora/\r
-    - Email: rodricelis@gmail.com`
-export const TROLL = `Oops! You found the 'important' file! But seriously, what brought you here? Curiosity or just for kicks? Either way, Thanks for visiting my Terminal and keep in touch 😄🔍`
-export const TESLA = `
-                 Tesla Landing Page Clone\r
-This is a clone of the popular Tesla website, It's only the landing page becouse i wanted to practice my design skills and learning Tailwind.\r
+\rAvailable commands:\r
+    - ls              list files and folders\r
+    - cd <dir>        change directory  (try: cd about, cd projects)\r
+    - ..              go back\r
+    - cat <file>      read a file\r
+    - clear           clear screen\r
+    - reset           reset terminal\r
+    - help            show this menu\r\n`
 
-Technologies used:\r
-    - Vite\r
-    - React\r
-    - Javascript\r
-    - Tailwind\r
+export const FACT = `\r\n🐧  "I don't need a Mac to build a macOS experience."\r\n    — Built entirely on Linux. Daily Linux user since day one.\r\n`
 
-Github: https://github.com/Congrak/Tesla_Landing_React_Clone`
-export const RODRICRAFT = `
-                 Rodricraft - Minecraft Clone\r
-This is a clone of the popular Minecraft game called Rodricraft.\r
+export const ABOUT = `\r\n┌─────────────────────────────────────────────┐\r\n│              Rodrigo Celis                  │\r\n│   Full-Stack Developer → Cybersecurity      │\r\n│   📍 Hollywood, Florida                     │\r\n└─────────────────────────────────────────────┘\r\n\r\nVenezuelan engineer & developer based in Florida.\r\nTelecommunications Engineering background (UCAB) +\r\nFull-Stack certified (4Geeks Academy).\r\n\r\nI've led frontend teams, shipped production systems\r\nat scale, and resolved 3,000+ technical cases at\r\nTikTok — now focusing on Cybersecurity (SOC/AppSec).\r\n\r\n🐧 Daily Linux user. Terminal is home.\r\n`
 
-Technologies used:\r
-    - Vite\r
-    - React\r
-    - Javascript\r
-    - CSS\r
-    - Three (Fiber, Cannon, Drei)\r
+export const CONTACT = `\r\n┌─────────────────────────────────────────────┐\r\n│                  Contact                    │\r\n└─────────────────────────────────────────────┘\r\n\r\n  📧  rodricelis@gmail.com\r\n  💼  linkedin.com/in/rodrigo-celis-zamora\r\n  🐙  github.com/Congrak\r\n  📞  (954) 832-2731\r\n  📍  Hollywood, Florida\r\n`
 
-Controls:\r
-    - Movement: Key W, A, S, D\r
-    - Textures: 1, 2, 3, 4, 5\r
-    - Add Cube: Click\r
-    - Remove Cube: Atl + Click\r
-    
-Github: https://github.com/Congrak/Rodricraft/tree/main/Next.js/Learning/Rodricraft`
-export const POKEMON = `
-                 Pokedex Challenge\r
-I create this app to practice my skills with Apis and React.\r
+export const TROLL = `\r\n👀  You found the secret file.\r\n\r\n    Curiosity is the first skill in Cybersecurity.\r\n    You're already thinking like a hacker.\r\n\r\n    Keep exploring — and reach out if you want\r\n    to build something together. 🔐\r\n`
 
-Technologies used:\r
-    - Vite\r
-    - React\r
-    - Boostrap\r
-    - Javascript\r
-    - CSS\r
-    
-Github: https://github.com/Congrak/Pokemon_Challenge/tree/main/Projects/Pokedex`
-export const BSB = `
-                 Bid Sell Buy\r
-I create this app as my final project for 4Geeks Academy, its my firts Full Stack project.\r
+export const TINTSATHOME = `\r\n┌─────────────────────────────────────────────┐\r\n│              Tints at Home                  │\r\n│            [ Professional ]                 │\r\n└─────────────────────────────────────────────┘\r\n\r\nHair coloring service business site.\r\nBuilt and shipped for a real client in Florida.\r\n\r\nStack:\r\n    - Next.js\r\n    - TypeScript\r\n    - REST API\r\n    - CSS\r\n\r\n🌐  https://www.tintsathomefl.com/\r\n`
 
-Technologies used for Frontend:\r
-    - Vite\r
-    - React\r
-    - Javascript\r
-    - CSS\r
-    - Reactstrap\r
+export const WHIZZLINK = `\r\n┌─────────────────────────────────────────────┐\r\n│               WhizzLink                     │\r\n│             [ Personal ]                    │\r\n└─────────────────────────────────────────────┘\r\n\r\nURL shortener with persistent storage.\r\nClean UI, fast redirects, PostgreSQL backend.\r\n\r\nStack:\r\n    - Next.js\r\n    - TypeScript\r\n    - PostgreSQL\r\n    - CSS\r\n\r\n🌐  https://whizzlink.vercel.app/\r\n`
 
-Technologies used for Backend:\r
-    - Flask\r
-    - SqlAlchemy\r
-    - Python\r
-    - Redis\r
-    - JWT\r
-    
-Github: https://github.com/Congrak/Bid_Buy_Sell`
+export const ICONDEX = `\r\n┌─────────────────────────────────────────────┐\r\n│                IconDex                      │\r\n│             [ Personal ]                    │\r\n└─────────────────────────────────────────────┘\r\n\r\nIcon library published to NPM.\r\nDocumented and tested with Storybook.\r\n\r\nStack:\r\n    - React\r\n    - TypeScript\r\n    - Storybook\r\n    - Vite\r\n    - NPM\r\n\r\n🌐  https://icondex.vercel.app/\r\n`
+
+export const RODRICRAFT = `\r\n┌─────────────────────────────────────────────┐\r\n│              Rodricraft                     │\r\n│         [ Minecraft Clone ]                 │\r\n└─────────────────────────────────────────────┘\r\n\r\n3D interactive experience built with Three.js.\r\nPlace/remove blocks in a voxel world.\r\n\r\nStack:\r\n    - React\r\n    - Three.js (Fiber, Cannon, Drei)\r\n    - Vite\r\n    - JavaScript\r\n\r\nControls:\r\n    - Move: W A S D\r\n    - Place block: Click\r\n    - Remove block: Alt + Click\r\n    - Textures: 1 2 3 4 5\r\n\r\n🌐  https://rodricraft.netlify.app\r\n🐙  github.com/Congrak/Rodricraft\r\n`
